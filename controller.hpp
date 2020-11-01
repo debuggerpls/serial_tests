@@ -23,7 +23,10 @@ private:
 
 std::string _device;
 int _fd{-1};
+fd_set _rfds;
 struct timeval _tv;
+uint8_t _buf[512];
+uint32_t _buf_offset{0};
 
 
 };
